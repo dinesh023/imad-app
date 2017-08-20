@@ -8,3 +8,17 @@ button.onclick = function (){
     span.innerHTML = counter.toString(); 
     
 };
+
+var namse= document.getElementById('name');
+var names=namse.value;
+var submitid= document.getElementById('submit');
+submitid.onclick = function(){
+  var name=['name1','name2','name2'];
+  var list='';
+  for(var i=0;i<name.length;i++)
+  {
+      list+= '<li>'+name[i]+'</li>';
+  }
+  var ul= document.getElementById('idd');
+  ul.innerHTML=list;
+};
