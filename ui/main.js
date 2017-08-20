@@ -1,1 +1,5 @@
-console.log('Loaded!');
+<html>
+<head>
+  <script>
+</head>
+</html>
