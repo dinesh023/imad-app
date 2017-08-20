@@ -22,5 +22,6 @@ body {
 
 .cointainer{
     font-size: 200px;
-    color: blue;
+    color: blue
+    text-align: center;
 }
