@@ -40,7 +40,7 @@ app.get('/signup/:num/:username/:password',function(req,res)
    var num = req.params.num;
    
    if(num == 111){
-       pool.query('INSERT INTO "login" values($1,$2),[username,password]',function(req,res){
+       pool.query('INSERT INTO "login" values($s1,$s2),[username,password]',function(req,res){
           if(err)
           {
               res.send(404).send("NO DATA FOUND");
