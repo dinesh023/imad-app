@@ -6,6 +6,13 @@ var crypto = require('crypto');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 
+var config = {
+    user: 'dineshdinesh023',
+    database: 'dineshdinesh023',
+    host: 'db.imad.hasura-app.io',
+    port: '5432',
+    password: 'db-dineshdinesh023-37304'
+};
 
 var app = express();
 app.use(morgan('combined'));
@@ -26,6 +33,24 @@ app.get('/', function (req, res) {
 app.get('/login/:username',function(req,res){
     var name1 =  req.params.username;
     res.send(name1.toString());
+});
+var pool = new Pool(config);
+app.get('/signup/:num/:username/:password',function(req,res)
+{
+   var num = req.params.num;
+   
+   if(num == 111){
+       pool.query('INSERT INTO "login" values($1,$2),[username,password]',function(req,res){
+          if(err)
+          {
+              res.send(404).send("NO DATA FOUND");
+          }
+          else
+          {
+              res.send("SUCCESS");
+          }
+       });
+   }
 });
 
 
