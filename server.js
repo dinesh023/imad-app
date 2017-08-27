@@ -19,8 +19,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/login:username'function(req,res){
-    var name =  req.parans.username;
-    res.send(name.tostring());
+    var name1 =  req.parans.username;
+    res.send(name1.tostring());
 });
 
 
