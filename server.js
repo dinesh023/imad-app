@@ -23,7 +23,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/login:username',function(req,res){
+app.get('/login/:username',function(req,res){
     var name1 =  req.parans.username;
     res.send(name1.toString());
 });
