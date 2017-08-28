@@ -36,8 +36,9 @@ app.get('/login/:username',function(req,res){
 });
 var pool = new Pool(config);
 app.get('/signup/:num/:username/:password',function(req,res)
-{
-   var num = req.params.num;
+{   var username = req.params.username;
+    var password = req.params.password;
+    var num = req.params.num;
    
    if(num == 111){
        pool.query('INSERT INTO "login" values($s1,$s2,0),[username,password]',function(req,res){
