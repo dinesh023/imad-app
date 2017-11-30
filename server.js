@@ -17,7 +17,7 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-app.get('/main', function (req, res) {
+app.get('/signup', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'dinesh.html'));
 });
 
