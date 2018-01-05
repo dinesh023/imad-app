@@ -22,12 +22,12 @@ submitid.onclick = function(){
   var ul= document.getElementById('idd');
   ul.innerHTML=list;
 };
-var num= document.getElementById('num1');
-var numa=num;
-var nums= document.getElementById('num2');
-var numb=nums;
-var subt= document.getElementById('sub');
-subt.onclick = function(){
-    var ans= numa+numb;
+function subt(){
+    var num= document.getElementById('num1');
+    var numa=num;
+    var nums= document.getElementById('num2');
+    var numb=nums;
+    var subt= document.getElementById('sub');
+    ans= numa+numb;
     document.write("Answer :" + ans)
 }
