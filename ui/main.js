@@ -29,5 +29,5 @@ var numb=nums;
 var subt= document.getElementById('sub');
 subt.onclick = function(){
     var ans= numa+numb;
-    document.write("Answer :" + ans);
+    document.write("Answer :" + ans)
 }
